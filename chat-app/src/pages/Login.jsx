@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../firebase'
-
+import Background from '../images/background.png'
 function Login() {
 
   const navigate = useNavigate()
@@ -23,6 +23,8 @@ function Login() {
 
   return (
     <div className='formContainer'>
+      <div className='forms'>
+      
         <div className='formWrapper'>
         <span className="logo">Scrappy Chat</span>
         <span className="title">Login</span>
@@ -35,6 +37,8 @@ function Login() {
         </form>
         <p>You don't have an account?<Link to="/register">Register</Link>  </p>
         </div>
+        </div>
+        <img className='back-img' src={Background} alt='More'/>
     </div>
   )
 }

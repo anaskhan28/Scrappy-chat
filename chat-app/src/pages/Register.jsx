@@ -1,11 +1,13 @@
 import React from 'react';
-import Add from '../images/addAvatar.png';
+
 import {  createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {  auth, db, storage} from "../firebase";
 import { useState } from 'react';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
 import { useNavigate, Link } from 'react-router-dom';
+import Background from '../images/background.png'
+
 function Register() {
 const navigate = useNavigate()
 const [error, setError] = useState(false)
@@ -69,7 +71,7 @@ const [error, setError] = useState(false)
             <input type='password' placeholder='password'/>
             <input style={{display: "none"}} type='file' id='file'/>
             <label htmlFor="file">
-                <img src={Add} alt="avatar"/>
+                
                 <span>Add an Avatar</span>
             </label>
             <button>Sign up</button>
@@ -77,6 +79,7 @@ const [error, setError] = useState(false)
         </form>
         <p>You do have an account?<Link to="/login">Login</Link> </p>
         </div>
+        <img className='back-img' src={Background} alt='More'/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
-import Cam from '../images/cam.png'
-import Add from '../images/add.png'
-import More from '../images/more.png'
+import {AiOutlineVideoCameraAdd} from 'react-icons/ai'
+import {HiOutlineDotsHorizontal} from 'react-icons/hi'
+import {CgProfile} from 'react-icons/cg'
 import Messages from './Messages'
 import Input from './Input'
 
@@ -15,9 +15,9 @@ function Chat() {
       <div className="chatInfo">
         <span>{data.user?.displayName}</span>
         <div className="chatIcons">
-          <img src={Cam} alt='camer'/>
-          <img src={Add} alt='Add'/>
-          <img src={More} alt='More'/>
+          <AiOutlineVideoCameraAdd/>
+          <CgProfile/>
+          <HiOutlineDotsHorizontal/>
         </div>
         
       </div>
