@@ -5,6 +5,6 @@
 ## Tech Stack
 - Figma (for designing)
 - React JS
-- SAAS
+- SCSS
 - Firebase
 - Vercel
