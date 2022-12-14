@@ -1,9 +1,12 @@
 import React,{useContext} from 'react'
-import {AiOutlineVideoCameraAdd} from 'react-icons/ai'
-import {HiOutlineDotsHorizontal} from 'react-icons/hi'
-import {CgProfile} from 'react-icons/cg'
 import Messages from './Messages'
 import Input from './Input'
+import Call from '../images/call.svg';
+import Video from '../images/video.svg';
+import Search from '../images/search.png';
+import Lights from '../images/lights.png';
+
+
 
 import { ChatContext } from '../context/ChatContext'
 function Chat() {
@@ -13,11 +16,12 @@ function Chat() {
   return (
     <div className='chat'>
       <div className="chatInfo">
+        <span><img src={Lights} alt="light" /></span>
         <span>{data.user?.displayName}</span>
         <div className="chatIcons">
-          <AiOutlineVideoCameraAdd/>
-          <CgProfile/>
-          <HiOutlineDotsHorizontal/>
+          <img src={Call} alt="call"/>
+          <img src={ Video} alt="call"/>
+          <img src={Search} alt="call"/>
         </div>
         
       </div>

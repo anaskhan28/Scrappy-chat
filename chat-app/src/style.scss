@@ -152,6 +152,7 @@ cursor: pointer;
     background-image: url("./images/cover.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover ;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -297,6 +298,9 @@ cursor: pointer;
                 justify-content: space-between;
                 padding: 10px;
                 color: $font-color;
+                font-weight: bold;
+                
+               
 
             }
             .chatIcons{
@@ -304,7 +308,8 @@ cursor: pointer;
                 gap: 10px;
                 
                 img{
-                    height: 24px;
+                    width: 40px;
+                    height: 40px;
                     cursor: pointer;
                     
 
@@ -318,7 +323,15 @@ cursor: pointer;
                 padding: 10px;
                 height: calc(100% - 120px);
                 overflow: scroll;
-
+                display: flex;
+                flex-direction: column;
+                justify-content:right;
+                
+                img{
+                    background-size:cover;
+                    width: 60vh;
+                }
+         
                 .message{
                     display: flex;
                     gap: 20px;
@@ -395,7 +408,7 @@ cursor: pointer;
             }
             .input{
                 height: 70px;
-                background-color: $sidebar-color;
+                background-color: $form-background;
                 padding: 10px;
                 display: flex;
                 align-items: center;

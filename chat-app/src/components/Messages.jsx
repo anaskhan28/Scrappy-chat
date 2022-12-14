@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { ChatContext } from '../context/ChatContext'
 import Message from './Message'
-
+import Encryption from '../images/Message.png';
 function Messages() {
   const [messages, setMessages] = useState([]);
   const {data} = useContext(ChatContext);
@@ -21,6 +21,7 @@ function Messages() {
 
   return (
     <div className='messages'>
+      <img src={Encryption} alt=""/>
       {messages.map(m => (
       <Message message={m} key={m.id}/>
       ))}
