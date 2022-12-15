@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { ChatContext } from '../context/ChatContext'
 import Message from './Message'
-import Encryption from '../images/Message.png';
+import Encryption from '../images/message.png';
 function Messages() {
   const [messages, setMessages] = useState([]);
   const {data} = useContext(ChatContext);
