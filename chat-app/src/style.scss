@@ -143,8 +143,8 @@ left: 0%;
 right: 0%;
 top: 0%;
 bottom: 97.33%;
-width: 100%;
-background-size: cover;
+min-width: 100%;
+background-size:contain;
 cursor: pointer;
 
 }
@@ -328,8 +328,16 @@ cursor: pointer;
                 justify-content:right;
                 
                 img{
-                    background-size:cover;
-                    width: 60vh;
+                    max-width: fit-content;
+                    display: flex;
+                    justify-self: center;
+                    align-self: center;
+                    padding-bottom: 1rem;
+                    
+                     
+                    @include mobile{
+                    min-width: fit-content;
+                    }
                 }
          
                 .message{
